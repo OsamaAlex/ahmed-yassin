@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>أحمد عبد المنعم ياسين | Ahmed Abdel-Moneam Yassin — Executive Portfolio</title>
+  
+  <!-- Google Fonts: Cairo (Arabic) & Inter (English) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Tailwind Configuration with Dual-Theme Light/Dark Palette -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#C59A27',
+              goldLight: '#F5E397',
+              goldDark: '#8F6E12',
+              navy: '#0A1428',
+              navyLight: '#12203F',
+              slateBg: '#F8FAFC',
+              cardLight: '#FFFFFF',
+              darkBg: '#050B14',
+              darkCard: '#0C172B',
+              darkBorder: '#1A2946'
+            }
+          },
+          fontFamily: {
+            ar: ['Cairo', 'sans-serif'],
+            en: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Base smooth styles */
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-family: 'Cairo', sans-serif;
+    }
+    
+    html[lang="en"] body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Light Theme Glass & Elevation */
+    .theme-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      box-shadow: 0 4px 20px -2px rgba(10, 20, 40, 0.05);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .theme-card:hover {
+      border-color: #C59A27;
+      box-shadow: 0 16px 30px -4px rgba(10, 20, 40, 0.1);
+      transform: translateY(-3px);
+    }
+
+    /* Dark Theme Overrides */
+    .dark .theme-card {
+      background: rgba(12, 23, 43, 0.75);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+    }
+    .dark .theme-card:hover {
+      border-color: rgba(197, 154, 39, 0.5);
+      box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.8), 0 0 15px rgba(197, 154, 39, 0.15);
+    }
+
+    /* Custom Gold Gradient text */
+    .gold-gradient {
+      background: linear-gradient(135deg, #B5871D 0%, #D8A932 50%, #8F6E12 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .dark .gold-gradient {
+      background: linear-gradient(135deg, #FFF1B5 0%, #D8A932 50%, #AA820A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Pulse radar effect for Emergency Center */
+    .pulse-radar {
+      position: relative;
+    }
+    .pulse-radar::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 50%;
+      background: rgba(16, 185, 129, 0.4);
+      animation: radar 2s infinite;
+      z-index: 0;
+    }
+    @keyframes radar {
+      0% { transform: scale(1); opacity: 0.9; }
+      100% { transform: scale(2.5); opacity: 0; }
+    }
+
+    /* Print optimization */
+    @media print {
+      .no-print { display: none !important; }
+      body { background: #fff !important; color: #000 !important; }
+      .theme-card { border: 1px solid #ccc !important; box-shadow: none !important; }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-brand-darkBg dark:text-slate-100 antialiased selection:bg-brand-gold selection:text-white">
+
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-brand-darkBg/90 backdrop-blur-md border-b border-slate-200 dark:border-brand-darkBorder transition-colors no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo & Identity -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-goldDark via-brand-gold to-brand-goldLight p-0.5 shadow-md group-hover:scale-105 transition-transform">
+          <div class="w-full h-full bg-white dark:bg-brand-navy rounded-[10px] flex items-center justify-center">
+            <span class="text-brand-gold font-bold text-lg font-en">AY</span>
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-slate-900 dark:text-white font-bold text-sm sm:text-base leading-tight group-hover:text-brand-gold transition-colors" data-i18n="navName">
+            أحمد عبد المنعم ياسين
+          </span>
+          <span class="text-[10px] sm:text-xs text-brand-gold font-semibold uppercase tracking-wider font-en">
+            CRISIS & DIGITAL GOVERNANCE
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden lg:flex items-center gap-6 text-xs sm:text-sm font-semibold text-slate-600 dark:text-slate-300">
+        <a href="#about" class="hover:text-brand-gold transition-colors" data-i18n="navAbout">النبذة التنفيذية</a>
+        <a href="#pillars" class="hover:text-brand-gold transition-colors" data-i18n="navPillars">المحاور الاستراتيجية</a>
+        <a href="#experience" class="hover:text-brand-gold transition-colors" data-i18n="navExp">المسار القيادي</a>
+        <a href="#megaprojects" class="hover:text-brand-gold transition-colors" data-i18n="navProjects">المشروعات القومية</a>
+        <a href="#training" class="hover:text-brand-gold transition-colors" data-i18n="navTraining">البرامج والأكاديميات</a>
+        <a href="#credentials" class="hover:text-brand-gold transition-colors" data-i18n="navCredentials">المؤهلات والأوسمة</a>
+        <a href="#gallery" class="hover:text-brand-gold transition-colors" data-i18n="navGallery">الميدان والعمليات</a>
+      </nav>
+
+      <!-- Action Utilities: Lang Switch, Dark/Light, Print & Mobile Button -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        
+        <!-- Language Switcher Button -->
+        <button id="langToggleBtn" onclick="toggleLanguage()" class="p-2 sm:px-3 sm:py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:border-brand-gold text-xs font-bold transition-all flex items-center gap-1.5" title="Switch Language">
+          <i data-lucide="globe" class="w-4 h-4 text-brand-gold"></i>
+          <span id="langLabel" class="font-en">EN</span>
+        </button>
+
+        <!-- Dark / Light Mode Toggle Button (Light mode is DEFAULT) -->
+        <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:border-brand-gold transition-all" title="Toggle Theme">
+          <i id="themeIcon" data-lucide="moon" class="w-4 h-4 text-slate-600 dark:text-amber-400"></i>
+        </button>
+
+        <!-- Download CV Button -->
+        <a href="public/mycv/cvats.pdf" download="cvats.pdf" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-300 dark:border-slate-700 hover:border-brand-gold text-slate-700 dark:text-slate-200 text-xs font-semibold transition-all" title="تحميل السيرة الذاتية">
+          <i data-lucide="download" class="w-4 h-4 text-brand-gold dark:text-amber-400"></i>
+          <span data-i18n="printCv">تحميل CV</span>
+        </a>
+
+        <!-- Direct Contact CTA -->
+        <a href="#contact" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-gradient-to-r from-brand-gold to-brand-goldDark text-white font-bold text-xs shadow-sm hover:brightness-105 transition-all">
+          <i data-lucide="send" class="w-3.5 h-3.5"></i>
+          <span data-i18n="ctaContact">تواصل تنفيذي</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden px-4 pt-3 pb-6 border-t border-slate-200 dark:border-brand-darkBorder bg-white/95 dark:bg-brand-darkBg/95 backdrop-blur-lg">
+      <nav class="flex flex-col space-y-3 text-sm font-semibold">
+        <a href="#about" onclick="toggleMobileMenu()" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200" data-i18n="navAbout">النبذة التنفيذية</a>
+        <a href="#pillars" onclick="toggleMobileMenu()" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200" data-i18n="navPillars">المحاور الاستراتيجية</a>
+        <a href="#experience" onclick="toggleMobileMenu()" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200" data-i18n="navExp">المسار القيادي</a>
+        <a href="#megaprojects" onclick="toggleMobileMenu()" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200" data-i18n="navProjects">المشروعات القومية</a>
+        <a href="#training" onclick="toggleMobileMenu()" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200" data-i18n="navTraining">البرامج والأكاديميات</a>
+        <a href="#credentials" onclick="toggleMobileMenu()" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200" data-i18n="navCredentials">المؤهلات والأوسمة</a>
+        <a href="#gallery" onclick="toggleMobileMenu()" class="px-3 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200" data-i18n="navGallery">الميدان والعمليات</a>
+        <a href="#contact" onclick="toggleMobileMenu()" class="px-3 py-2.5 rounded-lg bg-brand-gold text-white font-bold text-center" data-i18n="ctaContact">تواصل تنفيذي</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="pt-24 sm:pt-28">
+    <section id="about" class="relative py-10 sm:py-16 lg:py-20 border-b border-slate-200 dark:border-brand-darkBorder overflow-hidden">
+      <!-- Subtle Decorative Background Glows -->
+      <div class="absolute -top-32 right-1/4 w-80 sm:w-96 h-80 sm:h-96 bg-brand-gold/10 rounded-full blur-[130px] pointer-events-none"></div>
+      <div class="absolute top-1/2 left-0 w-80 sm:w-96 h-80 sm:h-96 bg-blue-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- Text and Strategic Profile Data -->
+          <div class="lg:col-span-7 flex flex-col space-y-5">
+            
+            <!-- Live Status Operational Badge -->
+            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white dark:bg-brand-darkCard border border-brand-gold/40 text-xs font-bold text-slate-800 dark:text-amber-300 shadow-sm self-start">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 pulse-radar"></span>
+              <span data-i18n="heroBadge">مركز سيطرة الشبكة الوطنية الموحدة للطوارئ والسلامة العامة — محافظة الإسكندرية</span>
+            </div>
+
+            <!-- Name and Title -->
+            <div class="space-y-2">
+              <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white leading-tight">
+                <span data-i18n="heroGreeting">القيادي التنفيذي</span> <br>
+                <span class="gold-gradient" data-i18n="heroName">أحمد عبد المنعم ياسين</span>
+              </h1>
+              <p class="text-base sm:text-lg lg:text-xl font-bold text-slate-700 dark:text-slate-300" data-i18n="heroRole">
+                خبير إدارة الأزمات والسياسات العامة والتحول الرقمي | قيادي تنفيذي لحوكمة العمليات والمشروعات القومية
+              </p>
+              <div class="flex flex-wrap items-center gap-2 pt-0.5">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-gold/10 dark:bg-amber-500/20 text-brand-gold dark:text-amber-300 text-xs font-bold border border-brand-gold/30 dark:border-amber-500/40">
+                  🎓 ماجستير إدارة الأعمال المهني (MBA) • ماجستير في القانون العام (LL.M)
+                </span>
+              </div>
+              <p class="text-xs sm:text-sm font-semibold text-brand-gold dark:text-amber-400 font-en" data-i18n="heroRoleEn">
+                Crisis Management, Public Policy & Digital Transformation Expert | Executive Leader in Operations Governance & National Projects
+              </p>
+            </div>
+
+            <!-- Executive Bio Paragraph -->
+            <p class="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed text-justify" data-i18n="heroSummary">
+              كادر وطني تنفيذي يجمع بين حنكة إدارة الأزمات القومية وهندسة الحوكمة المؤسسية والتحول الرقمي للدولة، بخبرة قيادية تتجاوز 11 عاماً في الإدارة المحلية ومراكز السيطرة الاستراتيجية. يقود حالياً منظومة التخطيط والتنسيق العملياتي المشترك بمركز سيطرة الشبكة الوطنية الموحدة للطوارئ والسلامة العامة بالإسكندرية بين كافة الوزارات والأجهزة التنفيذية والأمنية. مؤهل استراتيجياً من «كلية الدفاع الوطني بالأكاديمية العسكرية للدراسات العليا والاستراتيجية» عبر الدورة التخصصية المكثفة في إدارة الأزمات والكوارث (8 أسابيع)؛ وحاصل على ماجستير إدارة الأعمال المهني (MBA) وماجستير القانون العام.
+            </p>
+
+            <!-- Key Quick Competency Tags -->
+            <div class="flex flex-wrap gap-2 pt-1 text-xs">
+              <span class="px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 font-semibold" data-i18n="tag1">🏛️ قيادة التخطيط والمتابعة بمركز السيطرة الموحد</span>
+              <span class="px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 font-semibold" data-i18n="tag2">💻 التحول الرقمي ومصفوفات تقييم الأداء (KPIs)</span>
+              <span class="px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 font-semibold" data-i18n="tag3">🚨 إدارة الأزمات والكوارث والجاهزية الاستباقية</span>
+              <span class="px-3 py-1 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 font-semibold" data-i18n="tag4">⚡ تعظيم الموارد وتصفير التكلفة (Zero-Cost Budgeting)</span>
+            </div>
+
+            <!-- Fast Contact Bar -->
+            <div class="flex flex-wrap items-center gap-3 pt-3">
+              <a href="https://www.linkedin.com/in/ahmed-yassin-governance" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs sm:text-sm shadow-md shadow-blue-500/20 transition-all">
+                <i data-lucide="linkedin" class="w-4 h-4"></i>
+                <span data-i18n="btnLinkedin">حساب LinkedIn الموثق</span>
+              </a>
+              <a href="tel:+201015195685" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-brand-gold dark:border-amber-500/50 bg-white dark:bg-brand-darkCard text-slate-800 dark:text-white font-bold text-xs sm:text-sm shadow-sm hover:bg-brand-gold/10 transition-all">
+                <i data-lucide="phone-call" class="w-4 h-4 text-brand-gold dark:text-amber-400"></i>
+                <span dir="ltr" class="font-en">+20 101 519 5685</span>
+              </a>
+              <a href="mailto:ahmedabdelmoneamyassin@gmail.com" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-200 text-xs sm:text-sm hover:border-brand-gold transition-all">
+                <i data-lucide="mail" class="w-4 h-4 text-slate-500 dark:text-slate-400"></i>
+                <span data-i18n="btnEmail">مراسلة رسمية</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Executive Photo Visual Card -->
+          <div class="lg:col-span-5 relative">
+            <div class="max-w-md mx-auto">
+              <div class="relative rounded-2xl p-1 bg-gradient-to-tr from-brand-gold via-slate-200 dark:via-slate-800 to-brand-goldDark shadow-2xl">
+                <div class="rounded-xl overflow-hidden bg-white dark:bg-brand-darkCard">
+                  
+                  <!-- Top Banner of Photo Card -->
+                  <div class="px-4 py-2.5 bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 flex items-center justify-between text-xs font-semibold">
+                    <span class="text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                      <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                      <span data-i18n="photoCardHeader">ديوان عام محافظة الإسكندرية</span>
+                    </span>
+                    <span class="text-brand-gold font-bold font-en text-[11px]">GOVERNANCE & CRISIS</span>
+                  </div>
+
+                  <!-- Executive Photo with Fallback -->
+                  <div class="relative h-96 sm:h-[430px] overflow-hidden bg-slate-200 dark:bg-slate-950">
+                    <img src="WhatsApp%20Image%202026-02-21%20at%2012.00.38%20PM.jpg" alt="الدكتور أحمد عبد المنعم ياسين" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x800/0A1428/C59A27?text=Dr.+Ahmed+Yassin'">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                    
+                    <div class="absolute bottom-3 right-3 left-3 bg-white/90 dark:bg-brand-navy/90 backdrop-blur-md p-3 rounded-xl border border-slate-200 dark:border-slate-700 text-xs shadow-lg">
+                      <div class="flex items-center justify-between">
+                        <div>
+                          <p class="font-bold text-slate-900 dark:text-white text-sm" data-i18n="photoCardName">د. أحمد عبد المنعم ياسين</p>
+                          <p class="text-slate-500 dark:text-slate-300 text-[11px]" data-i18n="photoCardRole">مدير التخطيط والمتابعة بمركز السيطرة الموحد</p>
+                        </div>
+                        <div class="w-8 h-8 rounded-full bg-brand-gold/20 flex items-center justify-center text-brand-gold font-bold">
+                          ★
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Quick Stats Bar Under Photo -->
+                  <div class="p-3 grid grid-cols-2 gap-2 text-center text-xs bg-slate-50 dark:bg-slate-900/60">
+                    <div class="p-2 rounded-lg bg-white dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+                      <p class="text-slate-400 text-[11px]" data-i18n="photoLoc1">الموقع الإداري</p>
+                      <p class="font-bold text-slate-800 dark:text-white mt-0.5" data-i18n="photoLocVal1">ديوان عام الإسكندرية</p>
+                    </div>
+                    <div class="p-2 rounded-lg bg-white dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
+                      <p class="text-slate-400 text-[11px]" data-i18n="photoLoc2">الغرفة المركزية</p>
+                      <p class="font-bold text-slate-800 dark:text-white mt-0.5" data-i18n="photoLocVal2">الشبكة الوطنية للطوارئ</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="py-10 bg-white dark:bg-brand-darkCard/50 border-b border-slate-200 dark:border-brand-darkBorder transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3 sm:gap-5">
+          
+          <div class="theme-card p-4 sm:p-5 rounded-xl text-center border-t-4 border-t-brand-gold">
+            <span class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white font-en counter" data-target="11">+11</span>
+            <p class="text-xs font-bold text-brand-gold mt-1" data-i18n="kpi1Title">عام من القيادة السيادية</p>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5" data-i18n="kpi1Sub">إدارة أزمات وحوكمة عامة</p>
+          </div>
+
+          <div class="theme-card p-4 sm:p-5 rounded-xl text-center border-t-4 border-t-emerald-500">
+            <span class="text-3xl sm:text-4xl font-extrabold text-emerald-600 dark:text-emerald-400 font-en counter" data-target="100">100%</span>
+            <p class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-1" data-i18n="kpi2Title">تأمين خطوط المياه الرئيسية</p>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5" data-i18n="kpi2Sub">ترحيل 3 خطوط استراتيجية</p>
+          </div>
+
+          <div class="theme-card p-4 sm:p-5 rounded-xl text-center border-t-4 border-t-blue-500">
+            <span class="text-3xl sm:text-4xl font-extrabold text-blue-600 dark:text-blue-400 font-en counter" data-target="70">-70%</span>
+            <p class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-1" data-i18n="kpi3Title">انخفاض معدل الحوادث</p>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5" data-i18n="kpi3Sub">معالجة النقاط السوداء (Black Spots)</p>
+          </div>
+
+          <div class="theme-card p-4 sm:p-5 rounded-xl text-center border-t-4 border-t-amber-500">
+            <span class="text-3xl sm:text-4xl font-extrabold text-amber-600 dark:text-amber-400 font-en counter" data-target="36">36h</span>
+            <p class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-1" data-i18n="kpi4Title">إزالة كوبري سيدي جابر</p>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5" data-i18n="kpi4Sub">زمن قياسي لفتح المسار</p>
+          </div>
+
+          <div class="col-span-2 md:col-span-1 theme-card p-4 sm:p-5 rounded-xl text-center border-t-4 border-t-purple-500">
+            <span class="text-3xl sm:text-4xl font-extrabold text-purple-600 dark:text-purple-400 font-en">M+ EGP</span>
+            <p class="text-xs font-bold text-slate-800 dark:text-slate-200 mt-1" data-i18n="kpi5Title">مشروعات قومية استراتيجية</p>
+            <p class="text-[11px] text-slate-500 dark:text-slate-400 mt-0.5" data-i18n="kpi5Sub">مترو، بشاير الخير، ومحاور</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="pillars" class="py-14 sm:py-20 border-b border-slate-200 dark:border-brand-darkBorder transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-wider font-en" data-i18n="pillarsSub">STRATEGIC PILLARS</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mt-1" data-i18n="pillarsTitle">
+            المحاور القيادية والاستراتيجية التخصصية
+          </h2>
+          <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mt-2" data-i18n="pillarsDesc">
+            تكامل فريد يجمع بين إدارة غرف العمليات اللحظية، هندسة بدائل النقل، الحوكمة الرقمية، والتشريع السيادي
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Pillar 1 -->
+          <div class="theme-card p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-red-100 dark:bg-red-500/10 border border-red-200 dark:border-red-500/30 flex items-center justify-center text-red-600 dark:text-red-400 mb-4">
+                <i data-lucide="radio" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="pillar1Title">
+                السيطرة الميدانية وغرف الأزمات السيادية
+              </h3>
+              <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed text-justify mb-4" data-i18n="pillar1Desc">
+                إدارة مركز السيطرة الموحد لحالات الطوارئ بالإسكندرية، وتوجيه فرق التدخل السريع في الأزمات القومية (النوات البحرية الشديدة، عواصف الأمطار والسيول، وأعطال المرافق الحيوية الكبرى).
+              </p>
+            </div>
+            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 border-t border-slate-100 dark:border-slate-800 pt-3">
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> <span data-i18n="p1Bullet1">الربط اللحظي مع مكتب المحافظ</span></li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> <span data-i18n="p1Bullet2">منظومة السلامة العامة المتكاملة</span></li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="theme-card p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/30 flex items-center justify-center text-blue-600 dark:text-blue-400 mb-4">
+                <i data-lucide="train" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="pillar2Title">
+                هندسة النقل البديل والمشروعات القومية
+              </h3>
+              <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed text-justify mb-4" data-i18n="pillar2Desc">
+                تصميم وإدارة المنظومة البديلة لحركة المواطنين أثناء إيقاف قطار أبو قير وترام الرمل لتنفيذ مشروع "مترو الإسكندرية"، مع توسعة محور أبو قير وإزالة العوائق الهندسية.
+              </p>
+            </div>
+            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 border-t border-slate-100 dark:border-slate-800 pt-3">
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> <span data-i18n="p2Bullet1">إدارة مسارات الأساطيل البديلة</span></li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> <span data-i18n="p2Bullet2">توسعة طريق أبو قير وحارتين إضافيتين</span></li>
+            </ul>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="theme-card p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/30 flex items-center justify-center text-amber-600 dark:text-amber-400 mb-4">
+                <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="pillar3Title">
+                الحوكمة الذكية ومؤشرات الأداء (KPIs)
+              </h3>
+              <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed text-justify mb-4" data-i18n="pillar3Desc">
+                تطوير لوحات قياس الأداء الرقمية للوحدات المحلية والإدارية، وتطبيق نظم التحليل المكاني الجغرافي (GIS) للحد من الحوادث ورفع كفاءة الخدمات بالأحياء والمراكز.
+              </p>
+            </div>
+            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 border-t border-slate-100 dark:border-slate-800 pt-3">
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> <span data-i18n="p3Bullet1">لوحات متابعة تفاعلية رقمية</span></li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> <span data-i18n="p3Bullet2">تقييم الفاعلية التنظيمية للأحياء</span></li>
+            </ul>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="theme-card p-6 rounded-2xl flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 mb-4">
+                <i data-lucide="scale" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="pillar4Title">
+                الامتثال التشريعي والسياسات العامة
+              </h3>
+              <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed text-justify mb-4" data-i18n="pillar4Desc">
+                صياغة القرارات التنظيمية وحوكمة المشروعات الممولة دولياً (مثل منحة المخلفات الخطرة الفنلندية)، وضبط اشتراطات البناء والإسكان القومي وفقاً للقانون العام.
+              </p>
+            </div>
+            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-2 border-t border-slate-100 dark:border-slate-800 pt-3">
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> <span data-i18n="p4Bullet1">ماجستير في القانون العام (LL.M)</span></li>
+              <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> <span data-i18n="p4Bullet2">إدارة المخاطر التعاقدية والتنفيذية</span></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="py-14 sm:py-20 border-b border-slate-200 dark:border-brand-darkBorder">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-wider font-en" data-i18n="expSub">EXECUTIVE CAREER</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mt-1" data-i18n="expTitle">
+            المسار المهني والمناصب القيادية
+          </h2>
+          <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mt-2" data-i18n="expDesc">
+            أكثر من عقد في صلب غرف اتخاذ القرار والقيادة الميدانية بمحافظة الإسكندرية
+          </p>
+        </div>
+
+        <div class="relative border-r-2 border-brand-gold/40 mr-4 sm:mr-10 space-y-10">
+          
+          <!-- Role 1 -->
+          <div class="relative pr-6 sm:pr-8">
+            <div class="absolute -right-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-gold ring-4 ring-white dark:ring-brand-darkBg"></div>
+            
+            <div class="theme-card p-5 sm:p-7 rounded-2xl border-r-4 border-r-brand-gold">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                <span class="px-2.5 py-0.5 rounded bg-brand-gold/10 text-brand-gold font-bold text-xs w-fit font-en">2023 — Present</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-en">Alexandria Governorate Headquarters</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white" data-i18n="role1Title">
+                مدير إدارة التخطيط والمتابعة بمركز سيطرة الشبكة الوطنية الموحدة للطوارئ والسلامة العامة
+              </h3>
+              <p class="text-xs sm:text-sm font-semibold text-brand-gold mt-0.5 mb-3" data-i18n="role1Org">
+                ديوان عام محافظة الإسكندرية — التنسيق المباشر مع معالي الفريق المحافظ
+              </p>
+              <div class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+                <p data-i18n="role1P1">• <strong>الذراع التنفيذي للقيادة العليا:</strong> المتابعة الدورية الاستراتيجية لمؤشرات أداء الأحياء والمديريات وعرض الموقف التنفيذي فورياً على المحافظ.</p>
+                <p data-i18n="role1P2">• <strong>قيادة غرفة العمليات والسيطرة المركزية:</strong> إدارة التدخلات الميدانية أثناء الكوارث والنوات البحرية وأعطال البنية التحتية بالتنسيق مع أجهزة الدولة.</p>
+                <p data-i18n="role1P3">• <strong>هندسة منظومة النقل البديل (مترو الإسكندرية):</strong> تصميم ومتابعة مسارات النقل البديلة أثناء إيقاف قطار أبو قير وترام الرمل وتوسعة المحاور وتفادي الاختناقات.</p>
+                <p data-i18n="role1P4">• <strong>حماية شبكات المياه الاستراتيجية:</strong> دراسة وترحيل 3 خطوط مياه رئيسية معارضة للمترو بنسبة منع للأعطال بلغت 100%.</p>
+                <p data-i18n="role1P5">• <strong>تطبيق نظم خفض حوادث الطرق:</strong> تحليل النقاط السوداء (Black Spots) وحقق انخفاضاً بنسبة 70% في معدل الحوادث بالمواقع المستهدفة.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 2 -->
+          <div class="relative pr-6 sm:pr-8">
+            <div class="absolute -right-[9px] top-1.5 w-4 h-4 rounded-full bg-blue-500 ring-4 ring-white dark:ring-brand-darkBg"></div>
+            
+            <div class="theme-card p-5 sm:p-7 rounded-2xl border-r-4 border-r-blue-500">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                <span class="px-2.5 py-0.5 rounded bg-blue-100 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 font-bold text-xs w-fit font-en">2020 — 2023</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-en">Office of the Governor of Alexandria</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white" data-i18n="role2Title">
+                عضو المكتب الفني للسيد المحافظ — إدارة المتابعة الميدانية
+              </h3>
+              <p class="text-xs sm:text-sm font-semibold text-blue-600 dark:text-blue-400 mt-0.5 mb-3" data-i18n="role2Org">
+                محافظة الإسكندرية — دعم اتخاذ القرار
+              </p>
+              <div class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+                <p data-i18n="role2P1">• إعداد التقارير الفنية التحليلية لتقييم كفاءة المديريات والجهات الخدمية وعرض أوجه القصور ونقاط القوة مباشرة على القيادة السياسية.</p>
+                <p data-i18n="role2P2">• الإشراف الميداني المباشر على المشروعات القومية المتعثرة وتذليل العقبات البيروقراطية لضمان التسليم وفق الجداول الزمنية المحددة.</p>
+                <p data-i18n="role2P3">• إعادة تنظيم ملف الإعلانات والميادين بما يعظم الموارد العامة للمحافظة ويحقق الانضباط الحضري والقانوني.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 3 -->
+          <div class="relative pr-6 sm:pr-8">
+            <div class="absolute -right-[9px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 ring-4 ring-white dark:ring-brand-darkBg"></div>
+            
+            <div class="theme-card p-5 sm:p-7 rounded-2xl border-r-4 border-r-emerald-500">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                <span class="px-2.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400 font-bold text-xs w-fit font-en">2019 — 2020</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-en">National Social Housing Framework</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white" data-i18n="role3Title">
+                قائد الحصر الميداني والإخلاء وإعادة التوطين — مشروع بشاير الخير القومي
+              </h3>
+              <p class="text-xs sm:text-sm font-semibold text-emerald-600 dark:text-emerald-400 mt-0.5 mb-3" data-i18n="role3Org">
+                تطوير العشوائيات والمناطق غير الآمنة بالإسكندرية
+              </p>
+              <div class="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify">
+                <p data-i18n="role3P1">• قيادة فرق الحصر الميداني الشامل للمناطق غير الآمنة وتنفيذ خطة الإخلاء والترحيل المنظم وإعادة التسكين بمشروع بشاير الخير دون نزاعات.</p>
+                <p data-i18n="role3P2">• التنسيق الأمني واللوجستي المشترك مع قيادة المنطقة الشمالية العسكرية والأجهزة المعنية، ونيل تكريم رسمي من قائد المنطقة الشمالية العسكرية.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Role 4 -->
+          <div class="relative pr-6 sm:pr-8">
+            <div class="absolute -right-[9px] top-1.5 w-4 h-4 rounded-full bg-purple-500 ring-4 ring-white dark:ring-brand-darkBg"></div>
+            
+            <div class="theme-card p-5 sm:p-7 rounded-2xl border-r-4 border-r-purple-500">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                <span class="px-2.5 py-0.5 rounded bg-purple-100 dark:bg-purple-500/20 text-purple-600 dark:text-purple-400 font-bold text-xs w-fit font-en">2018 — 2019</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-en">Finnish Grant Project</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white" data-i18n="role4Title">
+                عضو اللجنة القانونية العليا لمشروع إدارة المخلفات الخطرة (المنحة الفنلندية)
+              </h3>
+              <p class="text-xs sm:text-sm font-semibold text-purple-600 dark:text-purple-400 mt-0.5 mb-3" data-i18n="role4Org">
+                محافظة الإسكندرية والجهات المانحة الدولية
+              </p>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify" data-i18n="role4P1">
+                حوكمة الإجراءات واللوائح التعاقدية للمشروع البيئي الاستراتيجي، وضمان الامتثال التام مع قانون البيئة المصري والاشتراطات الصارمة المحددة من المنحة الفنلندية.
+              </p>
+            </div>
+          </div>
+
+          <!-- Role 5 -->
+          <div class="relative pr-6 sm:pr-8">
+            <div class="absolute -right-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-400 ring-4 ring-white dark:ring-brand-darkBg"></div>
+            
+            <div class="theme-card p-5 sm:p-7 rounded-2xl border-r-4 border-r-slate-400">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
+                <span class="px-2.5 py-0.5 rounded bg-slate-200 dark:bg-slate-700 text-slate-700 dark:text-slate-300 font-bold text-xs w-fit font-en">2015 — 2018</span>
+                <span class="text-xs text-slate-500 dark:text-slate-400 font-en">Central Housing & Inspection</span>
+              </div>
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white" data-i18n="role5Title">
+                مشرف المتابعة الميدانية والامتثال القانوني — إدارة الإسكان المركزي
+              </h3>
+              <p class="text-xs sm:text-sm font-semibold text-slate-500 dark:text-slate-400 mt-0.5 mb-3" data-i18n="role5Org">
+                مشروعات الإسكان والبنية التحتية القومية
+              </p>
+              <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed text-justify" data-i18n="role5P1">
+                التفتيش الهندسي والقانوني لضبط المخالفات البنائية، مراجعة اشتراطات التراخيص والسلامة الإنشائية للمباني، وتنسيق تقارير تقييم المخاطر المرفوعة للجهات المعنية.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="megaprojects" class="py-14 sm:py-20 border-b border-slate-200 dark:border-brand-darkBorder bg-slate-100/60 dark:bg-brand-darkCard/20 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="text-xs font-bold text-brand-gold uppercase tracking-wider font-en" data-i18n="projectsSub">MEGA-PROJECT OPERATIONS</span>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mt-1" data-i18n="projectsTitle">
+              المشروعات القومية وإدارة التدخلات المعقدة
+            </h2>
+          </div>
+          <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm max-w-md mt-2 md:mt-0 text-justify" data-i18n="projectsDesc">
+            سجل العمليات الناجحة التي قادها د. أحمد ياسين لدعم القيادة السياسية وتطويق الاختناقات الميدانية
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          
+          <!-- Card 1 -->
+          <div class="theme-card rounded-2xl overflow-hidden group">
+            <div class="h-48 relative overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('657955337_1359427369543309_5547410731693039351_n.jpg', 'مركز السيطرة الموحد للطوارئ والسلامة العامة')">
+              <img src="657955337_1359427369543309_5547410731693039351_n.jpg" alt="غرفة سيطرة الأزمات" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 right-3 px-3 py-1 rounded bg-blue-600 text-white font-bold text-xs" data-i18n="pCard1Badge">
+                مترو الإسكندرية وترام الرمل
+              </span>
+              <div class="absolute bottom-2 left-2 text-white/80 text-[11px] flex items-center gap-1">
+                <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i>
+                <span data-i18n="zoom">تكبير الصورة</span>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="pCard1Title">
+                شبكة بدائل النقل العام المتكاملة
+              </h3>
+              <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed mb-4 text-justify" data-i18n="pCard1Desc">
+                تخطيط وإطلاق منظومة النقل البديل المزامنة لإيقاف قطار أبو قير وترام الرمل؛ شملت مسارات الأتوبيسات ومركبات النقل الجماعي وتوسعة طريق أبو قير بحارتين إضافيتين لاستيعاب الحركة.
+              </p>
+              <div class="flex items-center justify-between text-xs text-brand-gold font-bold pt-3 border-t border-slate-100 dark:border-slate-800">
+                <span data-i18n="pCard1Stat1">استيعاب الكثافات</span>
+                <span data-i18n="pCard1Stat2">صفر شلل مروري</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="theme-card rounded-2xl overflow-hidden group">
+            <div class="h-48 relative overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('WhatsApp%20Image%202026-01-13%20at%202.29.49%20PM.jpeg', 'اجتماع تنسيقي بديوان محافظة الإسكندرية')">
+              <img src="WhatsApp%20Image%202026-01-13%20at%202.29.49%20PM.jpeg" alt="اجتماعات التنسيق التنفيذي" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 right-3 px-3 py-1 rounded bg-amber-600 text-white font-bold text-xs" data-i18n="pCard2Badge">
+                إزالة كوبري سيدي جابر
+              </span>
+              <div class="absolute bottom-2 left-2 text-white/80 text-[11px] flex items-center gap-1">
+                <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i>
+                <span data-i18n="zoom">تكبير الصورة</span>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="pCard2Title">
+                إزالة هندسية معقدة في 36 ساعة
+              </h3>
+              <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed mb-4 text-justify" data-i18n="pCard2Desc">
+                الإشراف الميداني الشامل على هدم كوبري مشاة سيدي جابر لفتح مسار مشروع المترو القومي؛ نُفذت العملية خلال عطلة نهاية الأسبوع في 36 ساعة قياسية دون شلل مروري بالمحور.
+              </p>
+              <div class="flex items-center justify-between text-xs text-brand-gold font-bold pt-3 border-t border-slate-100 dark:border-slate-800">
+                <span data-i18n="pCard2Stat1">زمن الإنجاز</span>
+                <span data-i18n="pCard2Stat2">36 ساعة قياسية</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="theme-card rounded-2xl overflow-hidden group">
+            <div class="h-48 relative overflow-hidden bg-slate-900 cursor-pointer" onclick="openLightbox('WhatsApp%20Image%202026-02-21%20at%2011.15.32%20AM%20(5).jpeg', 'تغطية إعلامية مباشرة للأزمات على القنوات الوطنية')">
+              <img src="WhatsApp%20Image%202026-02-21%20at%2011.15.32%20AM%20(5).jpeg" alt="التغطية الإعلامية لإدارة الطوارئ" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <span class="absolute top-3 right-3 px-3 py-1 rounded bg-red-600 text-white font-bold text-xs" data-i18n="pCard3Badge">
+                إدارة السيول والأنفاق
+              </span>
+              <div class="absolute bottom-2 left-2 text-white/80 text-[11px] flex items-center gap-1">
+                <i data-lucide="zoom-in" class="w-3.5 h-3.5"></i>
+                <span data-i18n="zoom">تكبير الصورة</span>
+              </div>
+            </div>
+            <div class="p-5">
+              <h3 class="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2" data-i18n="pCard3Title">
+                السيطرة الميدانية في الأنفاق الحيوية
+              </h3>
+              <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed mb-4 text-justify" data-i18n="pCard3Desc">
+                قيادة عمليات سحب التراكمات المائية والثلجية بأنفاق الإسكندرية (كليوباترا والإبراهيمية)، والتنسيق الإعلامي المباشر عبر شاشات القنوات الوطنية (ON E وMBC مصر برنامج الحكاية).
+              </p>
+              <div class="flex items-center justify-between text-xs text-brand-gold font-bold pt-3 border-t border-slate-100 dark:border-slate-800">
+                <span data-i18n="pCard3Stat1">التواجد الميداني</span>
+                <span data-i18n="pCard3Stat2">بث تلفزيوني مباشر</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="training" class="py-14 sm:py-20 border-b border-slate-200 dark:border-brand-darkBorder transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-wider font-en" data-i18n="trainSub">LEADERSHIP PROGRAMS & ACADEMIES</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mt-1" data-i18n="trainTitle">
+            البرامج القيادية والأكاديميات التدريبية
+          </h2>
+          <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mt-2" data-i18n="trainDesc">
+            تأهيل رفيع المستوى لقيادة المراكز والمدن، إدارة الكوارث البحرية، والأكاديميات العسكرية والوطنية
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          
+          <!-- Program 1: New - Head of Center/City/District -->
+          <div class="theme-card p-5 rounded-2xl border-l-4 border-l-brand-gold flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-brand-gold/10 text-brand-gold flex items-center justify-center font-bold">
+                  <i data-lucide="crown" class="w-4 h-4"></i>
+                </span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-brand-gold/15 text-brand-gold" data-i18n="prog1Badge">المركز الأول على الجمهورية</span>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1" data-i18n="prog1Title">
+                برنامج إعداد رئيس مركز ومدينة / حي
+              </h3>
+              <p class="text-brand-gold font-semibold text-xs mb-2" data-i18n="prog1Org">
+                مركز تدريب التنمية المحلية بسقارة
+              </p>
+              <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed text-justify" data-i18n="prog1Desc">
+                البرنامج القيادي السيادي لإعداد وتأهيل رؤساء المراكز والمدن والأحياء لإدارة التنمية المستدامة، منظومات العمل المحلي، حل النزاعات الميدانية، والحوكمة المالية والإدارية.
+              </p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-slate-100 dark:border-slate-800 text-[11px] text-slate-400 font-en">
+              Saqqara Training Center - Rank: 1st Nationwide
+            </div>
+          </div>
+
+          <!-- Program 2: New - Advanced Leadership -->
+          <div class="theme-card p-5 rounded-2xl border-l-4 border-l-blue-500 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-blue-500/10 text-blue-500 flex items-center justify-center font-bold">
+                  <i data-lucide="trending-up" class="w-4 h-4"></i>
+                </span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-blue-100 dark:bg-blue-500/20 text-blue-600 dark:text-blue-400 font-en">Executive Track</span>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1" data-i18n="prog2Title">
+                برنامج إعداد قادة متقدم
+              </h3>
+              <p class="text-blue-600 dark:text-blue-400 font-semibold text-xs mb-2" data-i18n="prog2Org">
+                مركز تدريب التنمية المحلية بسقارة
+              </p>
+              <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed text-justify" data-i18n="prog2Desc">
+                التأهيل الاستراتيجي المتقدم للقيادات الحكومية في مجالات اتخاذ القرار في بيئات عدم اليقين، التخطيط التشغيلي الكلي، وإدارة فرق العمل متعددة التخصصات.
+              </p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-slate-100 dark:border-slate-800 text-[11px] text-slate-400 font-en">
+              Advanced Leadership Preparation Program - Saqqara
+            </div>
+          </div>
+
+          <!-- Program 3: New - Marine Disasters Workshop -->
+          <div class="theme-card p-5 rounded-2xl border-l-4 border-l-cyan-500 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-cyan-500/10 text-cyan-500 flex items-center justify-center font-bold">
+                  <i data-lucide="anchor" class="w-4 h-4"></i>
+                </span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-cyan-100 dark:bg-cyan-500/20 text-cyan-700 dark:text-cyan-300" data-i18n="prog3Badge">طوارئ بحرية</span>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1" data-i18n="prog3Title">
+                ورشة عمل الكوارث البحرية والتلوث البحري
+              </h3>
+              <p class="text-cyan-600 dark:text-cyan-400 font-semibold text-xs mb-2" data-i18n="prog3Org">
+                إدارة الأزمات والمخاطر الساحلية
+              </p>
+              <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed text-justify" data-i18n="prog3Desc">
+                آليات الاحتواء السريع للتسربات النفطية والتلوث الساحلي، وسيناريوهات الإنقاذ البحري وتأمين الموانئ والشواطئ بالتعاون مع الجهات السيادية والمختصة.
+              </p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-slate-100 dark:border-slate-800 text-[11px] text-slate-400 font-en">
+              Marine Disasters & Coastal Pollution Command Workshop
+            </div>
+          </div>
+
+          <!-- Program 4: Future Leaders Program -->
+          <div class="theme-card p-5 rounded-2xl border-l-4 border-l-emerald-500 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center font-bold">
+                  <i data-lucide="award" class="w-4 h-4"></i>
+                </span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-300" data-i18n="prog4Badge">المركز الأول (ممتاز)</span>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1" data-i18n="prog4Title">
+                برنامج قادة المستقبل
+              </h3>
+              <p class="text-emerald-600 dark:text-emerald-400 font-semibold text-xs mb-2" data-i18n="prog4Org">
+                مركز تدريب التنمية المحلية بسقارة (2020)
+              </p>
+              <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed text-justify" data-i18n="prog4Desc">
+                اجتياز البرنامج وتصدر الدفعة بالمركز الأول بتقدير ممتاز، مما أهّل للحصول على تكريم ودرع التميز مباشرة من محافظ الإسكندرية.
+              </p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-slate-100 dark:border-slate-800 text-[11px] text-slate-400 font-en">
+              Future Leaders Program - Ministry of Local Development
+            </div>
+          </div>
+
+          <!-- Program 5: Nasser Military Academy -->
+          <div class="theme-card p-5 rounded-2xl border-l-4 border-l-red-500 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-red-500/10 text-red-500 flex items-center justify-center font-bold">
+                  <i data-lucide="shield-check" class="w-4 h-4"></i>
+                </span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-red-100 dark:bg-red-500/20 text-red-700 dark:text-red-300" data-i18n="prog5Badge">أكاديمية عسكرية عليا</span>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1" data-i18n="prog5Title">
+                إدارة الأزمات والتفاوض الاستراتيجي
+              </h3>
+              <p class="text-red-600 dark:text-red-400 font-semibold text-xs mb-2" data-i18n="prog5Org">
+                أكاديمية ناصر العسكرية العليا
+              </p>
+              <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed text-justify" data-i18n="prog5Desc">
+                دراسات معمقة في إدارة الأزمات ذات البعد الاستراتيجي والأمني القومي، تقنيات التفاوض في بيئات الضغط العالي، وتحليل المخاطر السيادية.
+              </p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-slate-100 dark:border-slate-800 text-[11px] text-slate-400 font-en">
+              Crisis Management & Strategic Negotiation - Nasser Academy
+            </div>
+          </div>
+
+          <!-- Program 6: NTA & Technical Signals -->
+          <div class="theme-card p-5 rounded-2xl border-l-4 border-l-purple-500 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span class="w-9 h-9 rounded-xl bg-purple-500/10 text-purple-500 flex items-center justify-center font-bold">
+                  <i data-lucide="cpu" class="w-4 h-4"></i>
+                </span>
+                <span class="px-2 py-0.5 rounded text-[11px] font-bold bg-purple-100 dark:bg-purple-500/20 text-purple-700 dark:text-purple-300 font-en">NTA & Signal Corps</span>
+              </div>
+              <h3 class="text-base font-bold text-slate-900 dark:text-white mb-1" data-i18n="prog6Title">
+                المسئول الحكومي المحترف والسيطرة الإشارية
+              </h3>
+              <p class="text-purple-600 dark:text-purple-400 font-semibold text-xs mb-2" data-i18n="prog6Org">
+                الأكاديمية الوطنية للتدريب (NTA) وسلاح الإشارة
+              </p>
+              <p class="text-slate-600 dark:text-slate-300 text-xs leading-relaxed text-justify" data-i18n="prog6Desc">
+                برنامج المسئول الحكومي المحترف من الأكاديمية الوطنية للتدريب، مع التدريب التخصصي لغرف السيطرة بمركز سيطرة سلاح الإشارة وتدريب PMP والتحول الرقمي.
+              </p>
+            </div>
+            <div class="mt-4 pt-2.5 border-t border-slate-100 dark:border-slate-800 text-[11px] text-slate-400 font-en">
+              National Training Academy (NTA) & Specialized Signal Command
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="credentials" class="py-14 sm:py-20 border-b border-slate-200 dark:border-brand-darkBorder transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-14">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-wider font-en" data-i18n="credSub">ACADEMIC & HONORS</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mt-1" data-i18n="credTitle">
+            المؤهلات العلمية والتكريمات الرسمية
+          </h2>
+          <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mt-2" data-i18n="credDesc">
+            تأهيل قانوني وإداري متقدم مدعوم بتكريمات استثنائية من القيادات العسكرية والتنفيذية
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
+          <!-- Column 1: Academic Degrees -->
+          <div class="theme-card p-6 sm:p-7 rounded-2xl">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-brand-gold/15 text-brand-gold flex items-center justify-center">
+                <i data-lucide="graduation-cap" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="degHeader">الدرجات العلمية العليا</h3>
+                <p class="text-xs text-slate-400 font-en">Academic Postgraduate Degrees</p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              
+              <!-- MBA -->
+              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                <div class="flex items-center justify-between text-brand-gold font-bold text-xs mb-1">
+                  <span data-i18n="mbaTitle">ماجستير إدارة الأعمال المهني (MBA)</span>
+                  <span class="font-en">2025</span>
+                </div>
+                <p class="font-semibold text-slate-900 dark:text-white text-sm" data-i18n="mbaUni">جامعة كفر الشيخ — مصر</p>
+                <p class="text-slate-600 dark:text-slate-300 text-xs mt-1 text-justify" data-i18n="mbaThesis">
+                  عنوان الرسالة: <strong>"تقييم الفاعلية التنظيمية للوحدات الإدارية المحلية بمحافظة الإسكندرية"</strong> — دراسة تطبيقية لتحسين الأداء المؤسسي والحوكمة.
+                </p>
+              </div>
+
+              <!-- LL.M -->
+              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                <div class="flex items-center justify-between text-blue-600 dark:text-blue-400 font-bold text-xs mb-1">
+                  <span data-i18n="llmTitle">ماجستير في القانون العام (LL.M)</span>
+                  <span class="font-en">2014</span>
+                </div>
+                <p class="font-semibold text-slate-900 dark:text-white text-sm" data-i18n="llmUni">جامعة طنطا — كلية الحقوق</p>
+                <p class="text-slate-600 dark:text-slate-300 text-xs mt-1 text-justify" data-i18n="llmDesc">
+                  تخصص دقيق في القانون الإداري العام، صياغة التشريعات، والحريات والسياسات العامة للدولة.
+                </p>
+              </div>
+
+              <!-- LL.B -->
+              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                <div class="flex items-center justify-between text-slate-600 dark:text-slate-300 font-bold text-xs mb-1">
+                  <span data-i18n="llbTitle">ليسانس الحقوق (LL.B)</span>
+                  <span class="font-en">2012</span>
+                </div>
+                <p class="font-semibold text-slate-900 dark:text-white text-sm" data-i18n="llbUni">جامعة الإسكندرية — كلية الحقوق</p>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Column 2: Honors and Awards -->
+          <div class="theme-card p-6 sm:p-7 rounded-2xl">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-amber-500/15 text-amber-500 flex items-center justify-center">
+                <i data-lucide="medal" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="awardsHeader">الأوسمة والتقديرات الرسمية</h3>
+                <p class="text-xs text-slate-400 font-en">Official Commendations & Recognitions</p>
+              </div>
+            </div>
+
+            <div class="space-y-4 text-xs sm:text-sm">
+              
+              <!-- Governor Award -->
+              <div class="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20">
+                <div class="flex items-center gap-2 text-amber-600 dark:text-amber-400 font-bold">
+                  <i data-lucide="star" class="w-4 h-4"></i>
+                  <span data-i18n="aw1Title">درع وشهادة التميز من محافظ الإسكندرية</span>
+                </div>
+                <p class="text-slate-700 dark:text-slate-300 mt-1 text-xs text-justify" data-i18n="aw1Desc">
+                  تكريم رسمي مباشر من معالي الفريق محافظ الإسكندرية للأداء التنفيذي الاستثنائي والحصول على المركز الأول ببرنامج قادة المستقبل.
+                </p>
+              </div>
+
+              <!-- Military Region Commendation -->
+              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                <div class="flex items-center gap-2 text-slate-900 dark:text-white font-bold">
+                  <i data-lucide="shield" class="w-4 h-4 text-blue-500"></i>
+                  <span data-i18n="aw2Title">تكريم قائد المنطقة الشمالية العسكرية</span>
+                </div>
+                <p class="text-slate-600 dark:text-slate-300 mt-1 text-xs text-justify" data-i18n="aw2Desc">
+                  تكريم خاص تقديراً للجهود القيادية والميدانية البارزة في تنفيذ مشروع "بشاير الخير" وتسكين أهالي المناطق غير الآمنة بنجاح تام.
+                </p>
+              </div>
+
+              <!-- Egypt Excellence Award Nomination -->
+              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                <div class="flex items-center gap-2 text-slate-900 dark:text-white font-bold">
+                  <i data-lucide="trophy" class="w-4 h-4 text-emerald-500"></i>
+                  <span data-i18n="aw3Title">مرشح جائزة مصر للتميز الحكومي</span>
+                </div>
+                <p class="text-slate-600 dark:text-slate-300 mt-1 text-xs text-justify" data-i18n="aw3Desc">
+                  تم الترشيح لفئة <strong>"أفضل موظف حكومي متميز"</strong> على المستوى القومي بجمهورية مصر العربية تقديراً للإنجازات الملموسة.
+                </p>
+              </div>
+
+              <!-- Decent Life -->
+              <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700">
+                <div class="flex items-center gap-2 text-slate-900 dark:text-white font-bold">
+                  <i data-lucide="heart" class="w-4 h-4 text-red-500"></i>
+                  <span data-i18n="aw4Title">شهادة تقدير المبادرة الرئاسية "حياة كريمة"</span>
+                </div>
+                <p class="text-slate-600 dark:text-slate-300 mt-1 text-xs text-justify" data-i18n="aw4Desc">
+                  عن الإسهامات التطوعية الاستراتيجية في دعم مشروعات التنمية الريفية والمجتمعية بالمبادرة الرئاسية.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="gallery" class="py-14 sm:py-20 border-b border-slate-200 dark:border-brand-darkBorder bg-slate-100/60 dark:bg-brand-darkCard/20 transition-colors">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="text-xs font-bold text-brand-gold uppercase tracking-wider font-en" data-i18n="galSub">FIELD LOGISTICS & LIVE MEDIA</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 dark:text-white mt-1" data-i18n="galTitle">
+            الميدان وغرفة السيطرة وإدارة الطوارئ اللحظية
+          </h2>
+          <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm mt-2" data-i18n="galDesc">
+            حضور تنفيذي دائم على شاشات المراقبة وفي الأنفاق والميادين وأثناء التغطيات الإخبارية المباشرة
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          
+          <!-- Image 1 -->
+          <div class="theme-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('657955337_1359427369543309_5547410731693039351_n.jpg', 'غرفة السيطرة المركزية - مركز سيطرة الشبكة الوطنية للطوارئ والسلامة العامة')">
+            <div class="h-60 relative overflow-hidden bg-slate-900">
+              <img src="657955337_1359427369543309_5547410731693039351_n.jpg" alt="غرفة التحكم والسيطرة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 right-3 left-3 text-xs">
+                <span class="px-2 py-0.5 rounded bg-brand-gold text-white font-bold text-[10px]" data-i18n="g1Tag">مركز السيطرة</span>
+                <p class="text-white font-bold mt-1" data-i18n="g1Desc">إدارة شاشات المراقبة اللحظية وتحليل البلاغات</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 2 -->
+          <div class="theme-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('WhatsApp%20Image%202026-01-13%20at%202.29.49%20PM.jpeg', 'اجتماع تنسيقي برئاسة معالي الفريق محافظ الإسكندرية والقيادات التنفيذية والأمنية')">
+            <div class="h-60 relative overflow-hidden bg-slate-900">
+              <img src="WhatsApp%20Image%202026-01-13%20at%202.29.49%20PM.jpeg" alt="اجتماع ديوان المحافظة" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 right-3 left-3 text-xs">
+                <span class="px-2 py-0.5 rounded bg-blue-600 text-white font-bold text-[10px]" data-i18n="g2Tag">الاجتماعات التنسيقية</span>
+                <p class="text-white font-bold mt-1" data-i18n="g2Desc">عرض خطط الطوارئ بحضور القيادات التنفيذية</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 3 -->
+          <div class="theme-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('WhatsApp%20Image%202026-02-21%20at%2011.15.32%20AM%20(2).jpg', 'عمليات التدخل الميداني وسحب مياه الأمطار والسيول بأنفاق الإسكندرية')">
+            <div class="h-60 relative overflow-hidden bg-slate-900">
+              <img src="WhatsApp%20Image%202026-02-21%20at%2011.15.32%20AM%20(2).jpg" alt="الميدان أثناء السيول" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 right-3 left-3 text-xs">
+                <span class="px-2 py-0.5 rounded bg-emerald-600 text-white font-bold text-[10px]" data-i18n="g3Tag">الميدان المباشر</span>
+                <p class="text-white font-bold mt-1" data-i18n="g3Desc">إزالة تراكمات الأمطار والثلوج من الأنفاق الحيوية</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image 4 -->
+          <div class="theme-card rounded-xl overflow-hidden group cursor-pointer" onclick="openLightbox('WhatsApp%20Image%202026-02-21%20at%2011.15.32%20AM%20(4).jpg', 'تغطية إعلامية مباشرة عبر القنوات الوطنية ON E أثناء عمليات الطوارئ')">
+            <div class="h-60 relative overflow-hidden bg-slate-900">
+              <img src="WhatsApp%20Image%202026-02-21%20at%2011.15.32%20AM%20(4).jpg" alt="بث مباشر مع قناة ON" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-3 right-3 left-3 text-xs">
+                <span class="px-2 py-0.5 rounded bg-red-600 text-white font-bold text-[10px]" data-i18n="g4Tag">الإعلام الوطني</span>
+                <p class="text-white font-bold mt-1" data-i18n="g4Desc">متابعة ميدانية حية عبر الفضائيات الوطنية (ON)</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="py-14 sm:py-20 relative">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="theme-card p-6 sm:p-10 lg:p-12 rounded-3xl border border-brand-gold/40 shadow-2xl relative overflow-hidden">
+          
+          <div class="text-center max-w-2xl mx-auto mb-8 sm:mb-10">
+            <span class="w-12 h-12 rounded-2xl bg-brand-gold/15 text-brand-gold inline-flex items-center justify-center mb-3">
+              <i data-lucide="send" class="w-6 h-6"></i>
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white" data-i18n="contactTitle">
+              قنوات التواصل التنفيذي المباشر
+            </h2>
+            <p class="text-slate-600 dark:text-slate-300 text-xs sm:text-sm mt-2 text-justify sm:text-center" data-i18n="contactDesc">
+              للتواصل المهني والتنسيق بخصوص استشارات التخطيط الاستراتيجي، قيادة غرف الأزمات، وحوكمة الأداء المؤسسي
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+            
+            <!-- Mobile Phone -->
+            <a href="tel:+201015195685" class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:border-brand-gold transition-all block">
+              <div class="w-10 h-10 rounded-xl bg-brand-gold/10 text-brand-gold mx-auto flex items-center justify-center mb-2">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <p class="text-xs text-slate-400 font-semibold" data-i18n="cPhone">الاتصال الهاتفي المباشر</p>
+              <p class="text-sm font-bold text-slate-900 dark:text-white mt-1 font-en" dir="ltr">+20 101 519 5685</p>
+            </a>
+
+            <!-- Official Email -->
+            <a href="mailto:ahmedabdelmoneamyassin@gmail.com" class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:border-brand-gold transition-all block">
+              <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-500 mx-auto flex items-center justify-center mb-2">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+              </div>
+              <p class="text-xs text-slate-400 font-semibold" data-i18n="cEmail">البريد الإلكتروني المهني</p>
+              <p class="text-xs font-bold text-slate-900 dark:text-white mt-1 font-en truncate">ahmedabdelmoneamyassin@gmail.com</p>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/ahmed-yassin-governance" target="_blank" rel="noopener noreferrer" class="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 hover:border-brand-gold transition-all block">
+              <div class="w-10 h-10 rounded-xl bg-blue-600/10 text-blue-600 mx-auto flex items-center justify-center mb-2">
+                <i data-lucide="linkedin" class="w-5 h-5"></i>
+              </div>
+              <p class="text-xs text-slate-400 font-semibold" data-i18n="cLinkedin">الملف الموثق على LinkedIn</p>
+              <p class="text-xs font-bold text-slate-900 dark:text-white mt-1 font-en truncate">in/ahmed-yassin-governance</p>
+            </a>
+
+          </div>
+
+          <!-- Bottom Action Buttons: Print CV & WhatsApp -->
+          <div class="flex flex-wrap items-center justify-center gap-3 mt-8 pt-6 border-t border-slate-200 dark:border-slate-800">
+            <a href="public/mycv/cvats.pdf" download="cvats.pdf" class="px-5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 hover:border-brand-gold text-slate-800 dark:text-white text-xs sm:text-sm font-bold flex items-center gap-2 transition-all">
+              <i data-lucide="download" class="w-4 h-4 text-brand-gold dark:text-amber-400"></i>
+              <span data-i18n="printCvFull">تحميل وتصدير السيرة الذاتية (PDF / Download)</span>
+            </a>
+            <a href="https://wa.me/201015195685" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm flex items-center gap-2 shadow-md shadow-emerald-600/20 transition-all">
+              <i data-lucide="message-square" class="w-4 h-4"></i>
+              <span data-i18n="waContact">محادثة واتساب فورية (WhatsApp)</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="lightboxModal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="relative max-w-4xl w-full bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
+      <button onclick="closeLightbox()" class="absolute top-3 left-3 sm:top-4 sm:left-4 z-10 w-9 h-9 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-red-600 transition-colors">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div class="max-h-[75vh] overflow-hidden flex items-center justify-center bg-black">
+        <img id="lightboxImg" src="" alt="عرض تفصيلي" class="max-h-[75vh] w-auto object-contain">
+      </div>
+      <div class="p-4 bg-slate-900 border-t border-slate-800">
+        <p id="lightboxCaption" class="text-white text-xs sm:text-sm font-semibold text-center"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="border-t border-slate-200 dark:border-brand-darkBorder py-8 bg-white dark:bg-brand-darkBg transition-colors no-print">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+      <div class="flex items-center gap-2">
+        <span class="text-brand-gold font-bold" data-i18n="footerName">د. أحمد عبد المنعم ياسين</span>
+        <span>•</span>
+        <span data-i18n="footerRights">جميع الحقوق محفوظة © 2026</span>
+      </div>
+      <div class="font-en text-slate-400">
+        Director of Planning & Strategic Follow-Up | Alexandria, Egypt
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Bilingual Localization Dictionary (Arabic & English)
+    const translations = {
+      ar: {
+        navName: "أحمد عبد المنعم ياسين",
+        navAbout: "النبذة التنفيذية",
+        navPillars: "الجدارات والمهارات",
+        navExp: "المسار التنفيذي",
+        navProjects: "المشروعات القومية",
+        navTraining: "التأهيل الاستراتيجي",
+        navCredentials: "المؤهلات والأوسمة",
+        navGallery: "الميدان والعمليات",
+        printCv: "تحميل CV",
+        ctaContact: "تواصل تنفيذي",
+        heroBadge: "مركز سيطرة الشبكة الوطنية الموحدة للطوارئ والسلامة العامة — محافظة الإسكندرية",
+        heroGreeting: "القيادي التنفيذي",
+        heroName: "أحمد عبد المنعم ياسين",
+        heroRole: "خبير إدارة الأزمات والسياسات العامة والتحول الرقمي | قيادي تنفيذي لحوكمة العمليات والمشروعات القومية",
+        heroRoleEn: "Crisis Management, Public Policy & Digital Transformation Expert | Executive Leader in Operations Governance & National Projects",
+        heroSummary: "كادر وطني تنفيذي يجمع بين حنكة إدارة الأزمات القومية وهندسة الحوكمة المؤسسية والتحول الرقمي للدولة، بخبرة قيادية تتجاوز 11 عاماً في الإدارة المحلية ومراكز السيطرة الاستراتيجية. يقود حالياً منظومة التخطيط والتنسيق العملياتي المشترك بمركز سيطرة الشبكة الوطنية الموحدة للطوارئ والسلامة العامة بالإسكندرية بين كافة الوزارات والأجهزة التنفيذية والأمنية. مؤهل استراتيجياً من «كلية الدفاع الوطني بالأكاديمية العسكرية للدراسات العليا والاستراتيجية» عبر الدورة التخصصية المكثفة في إدارة الأزمات والكوارث (8 أسابيع)؛ وحاصل على ماجستير إدارة الأعمال المهني (MBA) وماجستير القانون العام.",
+        tag1: "🏛️ قيادة التخطيط والمتابعة بمركز السيطرة الموحد",
+        tag2: "💻 التحول الرقمي ومصفوفات تقييم الأداء (KPIs)",
+        tag3: "🚨 إدارة الأزمات والكوارث والجاهزية الاستباقية",
+        tag4: "⚡ تعظيم الموارد وتصفير التكلفة (Zero-Cost Budgeting)",
+        btnLinkedin: "حساب LinkedIn الموثق",
+        btnEmail: "مراسلة رسمية",
+        photoCardHeader: "ديوان عام محافظة الإسكندرية",
+        photoCardName: "أحمد عبد المنعم ياسين",
+        photoCardRole: "مدير التخطيط والمتابعة بمركز السيطرة الموحد",
+        photoLoc1: "الموقع الإداري",
+        photoLocVal1: "ديوان عام الإسكندرية",
+        photoLoc2: "الغرفة المركزية",
+        photoLocVal2: "الشبكة الوطنية للطوارئ",
+        kpi1Title: "عاماً من الإدارة الاستراتيجية",
+        kpi1Sub: "إدارة أزمات وهندسة سياسات عامة وحوكمة",
+        kpi2Title: "تصفير أعطال خطوط المياه الحيوية",
+        kpi2Sub: "إحلال ونقل 3 خطوط مياه ناقلة رئيسية",
+        kpi3Title: "انخفاض معدل وفيات وحوادث الطرق",
+        kpi3Sub: "عبر التحليل المكاني الرقمي GIS والذكاء الاصطناعي",
+        kpi4Title: "مستفيد بمبادرة الإفطار السنوي",
+        kpi4Sub: "تنظيم وسلاسل إمداد بأنطونيادس (2025–2026)",
+        kpi5Title: "باحثاً وماسحاً ميدانياً بالتجربة الجافة",
+        kpi5Sub: "قيادة فريق التقييم وبدائل النقل القومية",
+        pillarsSub: "CORE COMPETENCIES & KEY SKILLS",
+        pillarsTitle: "الجدارات والمهارات الأساسية",
+        pillarsDesc: "ثماني جدارات قيادية وميدانية متقدمة تدمج بين التخطيط الاستراتيجي، إدارة الأزمات، الحوكمة الرشيدة، والتحول الرقمي وصون أصول الدولة",
+        pillar1Title: "قيادة عمليات الإزالة الهندسية والتحكم المروري (كوبري سيدي جابر)",
+        pillar1Desc: "الإشراف الميداني والتخطيط التنفيذي لإزالة كوبري مشاة سيدي جابر بشارع أبو قير الحيوي في زمن قياسي لم يتجاوز 36 ساعة؛ وإدارة التحويلات والبدائل المرورية والتنسيق اللوجستي الكامل.",
+        p1Bullet1: "إزالة هندسية وتنسيق لوجستي في 36 ساعة دون إيقاف الحركة",
+        p1Bullet2: "إدارة التحويلات المرورية والبدائل بالتنسيق مع كافة الأجهزة",
+        pillar2Title: "إدارة الأزمات والكوارث والجاهزية الاستباقية",
+        pillar2Desc: "إدارة الطوارئ المناخية الحادة، التنبؤ بالمخاطر الاستراتيجية، تقدير الموقف الاستراتيجي السريع، وصياغة وتطبيق خطط استمرارية الأعمال والتعافي.",
+        p2Bullet1: "التنبؤ بالمخاطر الاستراتيجية وتقدير الموقف السريع",
+        p2Bullet2: "صياغة خطط استمرارية الأعمال وإدارة الطوارئ المناخية الحادة",
+        pillar3Title: "قيادة وتشغيل مراكز السيطرة وغرف العمليات المشتركة (CPX)",
+        pillar3Desc: "إدارة الربط والتكامل العملياتي اللحظي للشبكة الوطنية الموحدة للطوارئ، والاتصال التكتيكي المشترك، ومحاكاة مراكز القيادة والسيطرة (CPX).",
+        p3Bullet1: "الربط والتكامل العملياتي اللحظي للشبكة الوطنية للطوارئ",
+        p3Bullet2: "الاتصال التكتيكي المشترك ومحاكاة مراكز القيادة (CPX)",
+        pillar4Title: "إدارة السلم المجتمعي واحتواء الرأي العام",
+        pillar4Desc: "المعالجة الدبلوماسية الحكيمة للملفات الدينية والشعبية الحساسة، والتفاوض المؤسسي لمنع الأزمات ونزع فتيل الاحتقان المجتمعي وترسيخ هيبة الدولة.",
+        p4Bullet1: "المعالجة الدبلوماسية الحكيمة ونزع فتيل الاحتقان للملفات الحساسة",
+        p4Bullet2: "التفاوض المؤسسي لترسيخ هيبة الدولة وحماية السلم الأهلي",
+        expSub: "EXECUTIVE TRACK RECORD & CAREER",
+        expTitle: "الخبرات المهنية والمسار التنفيذي",
+        expDesc: "سجل تنفيذي موثق عبر أكثر من أحد عشر عاماً في صلب غرف اتخاذ القرار والقيادة الميدانية المباشرة",
+        role1Title: "مدير إدارة التخطيط والمتابعة | مركز سيطرة الشبكة الوطنية الموحدة للطوارئ والسلامة العامة",
+        role1Org: "ديوان عام محافظة الإسكندرية — التنسيق والربط العملياتي المباشر",
+        role1P1: "• قيادة فتح محور محطة السوق التبادلي وإدارة السلم المجتمعي وإزالة عائق مسجد أبو سعدة وتشييد مسجد بديل بتكلفة صفرية (Zero-Cost Budgeting).",
+        role1P2: "• قيادة التدخل الميداني لاحتواء أزمة عاصفة 31 مايو وإعادة فتح الشرايين في زمن قياسي مع حماية الأرواح والمنشآت.",
+        role1P3: "• الإشراف التنفيذي الكامل على إزالة كوبري مشاة سيدي جابر بشارع أبو قير في 36 ساعة دون إيقاف الحركة.",
+        role1P4: "• حماية شبكات المياه الاستراتيجية: نقل وإحلال 3 خطوط ناقلة رئيسية لمياه الشرب بنسبة تصفير للأعطال بلغت 100%.",
+        role1P5: "• تعزيز السلامة العامة عبر التحليل المكاني (GIS): خفض وفيات وحوادث الطرق بنسبة 70% وتخطيط بدائل مترو الإسكندرية بـ 125 ماسحاً ميدانياً.",
+        role2Title: "عضو المكتب الفني لمحافظ الإسكندرية – إدارة المتابعة",
+        role2Org: "ديوان عام محافظة الإسكندرية — دعم اتخاذ القرار",
+        role2P1: "• الإشراف الميداني للمشروعات القومية والتنموية وتذليل المعوقات الفنية والإدارية لضمان الالتزام الصارم بالجداول الزمنية.",
+        role2P2: "• الحوكمة وتنمية الموارد الذاتية: تنظيم قطاع الإعلانات مما أسهم في تعظيم الإيرادات لتتجاوز 48 مليون جنيه في 2023 وإزالة أكثر من 9,000 إعلان مخالف.",
+        role2P3: "• التفتيش الميداني وصون أصول الدولة وإحكام الرقابة ومعالجة الفجوات المؤسسية وإحالة التجاوزات لجهات التحقيق المختصة.",
+        role3Title: "قائد عمليات الحصر الميداني وإعادة التسكين | مشروع «بشائر الخير»",
+        role3Org: "مشروع التطوير الحضاري والقضاء على العشوائيات — الإسكندرية",
+        role3P1: "• القيادة التنفيذية والميدانية لعمليات حصر ونقل وتسكين آلاف الأسر من المناطق الخطرة (غيط العنب، طلمبات المكس، الهضبة الصينية، إلخ) إلى مجتمعات حضارية متكاملة.",
+        role3P2: "• إدارة التنسيق الميداني المباشر بين القوات المسلحة، والأجهزة الأمنية، والجهات التنفيذية، ونيل تكريم رسمي من قيادة المنطقة الشمالية العسكرية.",
+        role4Title: "عضو قانوني وتنفيذي | مشروع إدارة المخلفات الخطرة",
+        role4Org: "محافظة الإسكندرية وجهات التمويل الدولية",
+        role4P1: "حوكمة العقود والامتثال لضمان مطابقة العمليات التشغيلية للتشريعات الوطنية، المعايير البيئية، والاشتراطات الدولية.",
+        role5Title: "مشرف العمليات | إدارة الإسكان المركزي والمشروعات القومية",
+        role5Org: "محافظة الإسكندرية",
+        role5P1: "قيادة لجان الحصر الخاصة بتسكين وإزالة المناطق العشوائية بمحافظة الإسكندرية.",
+        projectsSub: "NATIONAL PROJECTS & INTERVENTIONS",
+        projectsTitle: "المشروعات القومية والعمليات الميدانية الكبرى",
+        projectsDesc: "سجل العمليات الاستراتيجية والميدانية الموثقة التي قادها وأشرف عليها أحمد ياسين لدعم القيادة التنفيذية",
+        pCard1Badge: "محور محطة السوق البديل",
+        pCard1Title: "فتح محور محطة السوق والمسجد البديل (Zero-Cost)",
+        pCard1Desc: "فتح محور عرضي استراتيجي يربط المحمودية وأبو قير والكورنيش، وإزالة عائق مسجد أبو سعدة ونزع فتيل الاحتقان الديني، وتشييد مسجد بديل بالكامل بمشاركة مجتمعية بتكلفة صفرية على موازنة الدولة.",
+        pCard1Stat1: "صفر تكلفة مالية",
+        pCard1Stat2: "ربط 3 شرايين حيوية",
+        pCard2Badge: "إزالة كوبري سيدي جابر",
+        pCard2Title: "إزالة هندسية معقدة في 36 ساعة",
+        pCard2Desc: "الإشراف الميداني الشامل على هدم كوبري مشاة سيدي جابر لفتح مسار مشروع المترو القومي في 36 ساعة قياسية دون شلل مروري بالمحور.",
+        pCard2Stat1: "36 ساعة قياسية",
+        pCard2Stat2: "استمرارية حركة السير",
+        pCard3Badge: "إدارة أزمة عاصفة 31 مايو",
+        pCard3Title: "السيطرة في الأنفاق وعاصفة 31 مايو",
+        pCard3Desc: "قيادة غرفة العمليات المشتركة لمواجهة تداعيات عاصفة 31 مايو، وتصفية 48 تجمع مياه بأنفاق كليوباترا والإبراهيمية، مع تغطية إعلامية حية عبر الفضائيات الوطنية.",
+        pCard3Stat1: "التواجد الميداني",
+        pCard3Stat2: "بث تلفزيوني مباشر",
+        trainSub: "LEADERSHIP PROGRAMS & ACADEMIES",
+        trainTitle: "البرامج القيادية والأكاديميات التدريبية",
+        trainDesc: "تأهيل رفيع المستوى لقيادة المراكز والمدن، إدارة الكوارث البحرية، والأكاديميات العسكرية والوطنية",
+        prog1Badge: "المركز الأول على الجمهورية",
+        prog1Title: "برنامج إعداد رئيس مركز ومدينة / حي",
+        prog1Org: "مركز تدريب التنمية المحلية بسقارة",
+        prog1Desc: "البرنامج القيادي السيادي لإعداد وتأهيل رؤساء المراكز والمدن والأحياء لإدارة التنمية المستدامة، منظومات العمل المحلي، حل النزاعات الميدانية، والحوكمة المالية والإدارية.",
+        prog2Title: "برنامج إعداد قادة متقدم",
+        prog2Org: "مركز تدريب التنمية المحلية بسقارة",
+        prog2Desc: "التأهيل الاستراتيجي المتقدم للقيادات الحكومية في مجالات اتخاذ القرار في بيئات عدم اليقين، التخطيط التشغيلي الكلي، وإدارة فرق العمل متعددة التخصصات.",
+        prog3Badge: "طوارئ بحرية",
+        prog3Title: "ورشة عمل الكوارث البحرية والتلوث البحري",
+        prog3Org: "إدارة الأزمات والمخاطر الساحلية",
+        prog3Desc: "آليات الاحتواء السريع للتسربات النفطية والتلوث الساحلي، وسيناريوهات الإنقاذ البحري وتأمين الموانئ والشواطئ بالتعاون مع الجهات السيادية والمختصة.",
+        prog4Badge: "المركز الأول (ممتاز)",
+        prog4Title: "برنامج قادة المستقبل",
+        prog4Org: "مركز تدريب التنمية المحلية بسقارة (2020)",
+        prog4Desc: "اجتياز البرنامج وتصدر الدفعة بالمركز الأول بتقدير ممتاز، مما أهّل للحصول على تكريم ودرع التميز مباشرة من محافظ الإسكندرية.",
+        prog5Badge: "أكاديمية عسكرية عليا",
+        prog5Title: "إدارة الأزمات والتفاوض الاستراتيجي",
+        prog5Org: "أكاديمية ناصر العسكرية العليا",
+        prog5Desc: "دراسات معمقة في إدارة الأزمات ذات البعد الاستراتيجي والأمني القومي، تقنيات التفاوض في بيئات الضغط العالي، وتحليل المخاطر السيادية.",
+        prog6Title: "المسئول الحكومي المحترف والسيطرة الإشارية",
+        prog6Org: "الأكاديمية الوطنية للتدريب (NTA) وسلاح الإشارة",
+        prog6Desc: "برنامج المسئول الحكومي المحترف من الأكاديمية الوطنية للتدريب، مع التدريب التخصصي لغرف السيطرة بمركز سيطرة سلاح الإشارة وتدريب PMP والتحول الرقمي.",
+        credSub: "ACADEMIC & HONORS",
+        credTitle: "المؤهلات العلمية والتكريمات الرسمية",
+        credDesc: "تأهيل قانوني وإداري متقدم مدعوم بتكريمات استثنائية من القيادات العسكرية والتنفيذية",
+        degHeader: "الدرجات العلمية العليا",
+        mbaTitle: "ماجستير إدارة الأعمال المهني (MBA)",
+        mbaUni: "كلية التجارة — جامعة كفر الشيخ",
+        mbaThesis: "عنوان الأطروحة: «تقييم الفاعلية التنظيمية لوحدات الإدارة المحلية بمحافظة الإسكندرية»",
+        llmTitle: "ماجستير في القانون العام",
+        llmUni: "كلية الحقوق — جامعة طنطا (2014)",
+        llmDesc: "التخصص: القانون العام والإداري، صياغة اللوائح والتشريعات التنفيذية، وهندسة السياسات العامة.",
+        llbTitle: "ليسانس الحقوق",
+        llbUni: "كلية الحقوق — جامعة الإسكندرية (2012)",
+        awardsHeader: "الأوسمة والتكريمات الرسمية",
+        aw1Title: "شهادة التميز القيادي من محافظ الإسكندرية",
+        aw1Desc: "تقديراً للأداء الاستثنائي وإحراز المركز الأول على مستوى الجمهورية بتقدير ممتاز في برنامج قادة المستقبل.",
+        aw2Title: "تكريم رسمي من قيادة المنطقة الشمالية العسكرية",
+        aw2Desc: "تقديراً للمساهمة الميدانية الفعالة في إنجاز مشروع التطوير الحضاري القومي «بشائر الخير».",
+        aw3Title: "الترشح الرسمي لجائزة مصر للتميز الحكومي",
+        aw3Desc: "الترشح لفئة «أفضل موظف حكومي» على مستوى جمهورية مصر العربية تقديراً للإنجازات والابتكار المؤسسي.",
+        aw4Title: "شهادة تقدير من المبادرة الرئاسية «حياة كريمة»",
+        aw4Desc: "تقديراً للجهود التنفيذية والميدانية في مشروعات تنمية وتطوير قرى الريف المصري.",
+        galSub: "FIELD LOGISTICS & LIVE MEDIA",
+        galTitle: "الميدان وغرفة السيطرة وإدارة الطوارئ اللحظية",
+        galDesc: "حضور تنفيذي دائم على شاشات المراقبة وفي الأنفاق والميادين وأثناء التغطيات الإخبارية المباشرة",
+        g1Tag: "مركز السيطرة",
+        g1Desc: "إدارة شاشات المراقبة اللحظية وتحليل البلاغات",
+        g2Tag: "الاجتماعات التنسيقية",
+        g2Desc: "عرض خطط الطوارئ بحضور القيادات التنفيذية",
+        g3Tag: "الميدان المباشر",
+        g3Desc: "إزالة تراكمات الأمطار والثلوج من الأنفاق الحيوية",
+        g4Tag: "الإعلام الوطني",
+        g4Desc: "متابعة ميدانية حية عبر الفضائيات الوطنية (ON)",
+        contactTitle: "قنوات التواصل التنفيذي المباشر",
+        contactDesc: "للتواصل المهني والتنسيق بخصوص استشارات التخطيط الاستراتيجي، قيادة غرف الأزمات، وحوكمة الأداء المؤسسي",
+        cPhone: "الاتصال الهاتفي المباشر",
+        cEmail: "البريد الإلكتروني المهني",
+        cLinkedin: "الملف الموثق على LinkedIn",
+        printCvFull: "تحميل وتصدير السيرة الذاتية (PDF / Download)",
+        waContact: "محادثة واتساب فورية (WhatsApp)",
+        footerName: "د. أحمد عبد المنعم ياسين",
+        footerRights: "جميع الحقوق محفوظة © 2026",
+        zoom: "تكبير الصورة"
+      },
+      en: {
+        navName: "Ahmed Abdel-Moneam Yassin",
+        navAbout: "Executive Summary",
+        navPillars: "Core Competencies",
+        navExp: "Executive Career",
+        navProjects: "Megaprojects",
+        navTraining: "Strategic Training",
+        navCredentials: "Credentials & Honors",
+        navGallery: "Command Room & Field",
+        printCv: "Download CV",
+        ctaContact: "Executive Contact",
+        heroBadge: "Unified National Emergency & Public Safety Control Center — Alexandria Governorate",
+        heroGreeting: "Executive Leader",
+        heroName: "Ahmed Abdel-Moneam Yassin",
+        heroRole: "Crisis Management, Public Policy & Digital Transformation Expert | Executive Leader in Operations Governance & National Projects",
+        heroRoleEn: "Director of Planning & Follow-Up | Public Governance, Spatial Analytics & High-Stakes Crisis Control",
+        heroSummary: "A distinguished national executive leader combining national crisis management acumen, institutional governance engineering, and state digital transformation, with over 11 years of high-level leadership across local administration and strategic control centers. Currently directs the joint operational planning and coordination system at the Unified National Emergency & Public Safety Control Center in Alexandria, orchestrating seamless inter-agency integration among all ministries, executive bodies, and security apparatuses. Strategically qualified by the National Defense College at the Military Academy for Postgraduate and Strategic Studies through the intensive specialized Crisis and Disaster Management program (8 weeks); holds an MBA in Organizational Effectiveness for Local Administration and a Master of Laws (LL.M) in Public Law.",
+        tag1: "🏛️ Planning & Follow-Up Directorate — Unified Control Center",
+        tag2: "💻 Digital Transformation & Institutional KPI Governance",
+        tag3: "🚨 Crisis Command, Proactive Readiness & Decisive Action",
+        tag4: "⚡ Zero-Cost Budgeting & Resource Maximization",
+        btnLinkedin: "Verified LinkedIn Profile",
+        btnEmail: "Official Inquiries",
+        photoCardHeader: "Alexandria Governorate Headquarters",
+        photoCardName: "Ahmed Abdel-Moneam Yassin",
+        photoCardRole: "Director of Planning & Unified Control Center",
+        photoLoc1: "Administrative Base",
+        photoLocVal1: "Alexandria Diwan",
+        photoLoc2: "Command Room",
+        photoLocVal2: "National Safety Network",
+        kpi1Title: "Years of High Strategic Leadership",
+        kpi1Sub: "Crisis Control & Public Policy Engineering",
+        kpi2Title: "Zero Critical Pipeline Burst",
+        kpi2Sub: "Relocated 3 Master Drinking Water Mains",
+        kpi3Title: "Traffic Accident & Fatality Reduction",
+        kpi3Sub: "Via GIS Spatial Analytics & AI Hotspot Remediation",
+        kpi4Title: "Annual Iftar Beneficiaries",
+        kpi4Sub: "Crowd Control & Supply Chain at Antoniades (2025–2026)",
+        kpi5Title: "Field Surveyors Commanded",
+        kpi5Sub: "Dry Run Evaluation for Transit Alternatives",
+        pillarsSub: "CORE COMPETENCIES & KEY SKILLS",
+        pillarsTitle: "Core Competencies & Key Skills",
+        pillarsDesc: "Eight advanced strategic and field competencies integrating control room operations, crisis command, good governance, and public asset protection",
+        pillar1Title: "Rapid Engineering Demolition & Traffic Control (Sidi Gaber Bridge)",
+        pillar1Desc: "Field oversight and executive planning for dismantling the Sidi Gaber pedestrian bridge on Abu Qir Street in a record time of under 36 hours without halting traffic.",
+        p1Bullet1: "Precision demolition in 36 continuous hours without traffic halt",
+        p1Bullet2: "Alternative transit management and seamless inter-agency coordination",
+        pillar2Title: "Crisis & Disaster Management & Proactive Readiness",
+        pillar2Desc: "Managing acute weather emergencies, strategic risk forecasting, rapid situation appraisal, and formulating business continuity and recovery plans under high-stress field conditions.",
+        p2Bullet1: "Strategic risk forecasting and rapid situation appraisal",
+        p2Bullet2: "Business continuity, recovery protocols & climate emergency command",
+        pillar3Title: "Command & Operation of Joint Emergency Operations Centers (CPX)",
+        pillar3Desc: "Directing real-time operational linkage and tactical communications for the Unified National Emergency Network across all security, regulatory, and municipal agencies, including Command Post Exercises (CPX).",
+        p3Bullet1: "Real-time operational integration for the National Safety Network",
+        p3Bullet2: "Joint tactical communication and command post simulation (CPX)",
+        pillar4Title: "Community Harmony & Public Sentiment Containment",
+        pillar4Desc: "Wise diplomatic handling of sensitive religious and public demographic files, institutional negotiation to prevent crisis escalation, and upholding state sovereignty through civic consensus.",
+        p4Bullet1: "Diplomatic mediation and defusing tensions in sensitive dossiers",
+        p4Bullet2: "Institutional consensus-building to safeguard social peace",
+        expSub: "EXECUTIVE TRACK RECORD & CAREER",
+        expTitle: "Executive Track Record & Professional Career",
+        expDesc: "Over eleven years at the epicenter of state decision-making, crisis operations, and executive leadership",
+        role1Title: "Director of Planning & Follow-Up — National Unified Emergency & Public Safety Network",
+        role1Org: "Alexandria Governorate Headquarters — Real-time Operational Linkage",
+        role1P1: "• Commanded opening of Mahatet El-Souq arterial corridor and defused community tensions around Abu Saada Mosque, constructing a replacement mosque via Zero-Cost Budgeting.",
+        role1P2: "• Commanded operations room during May 31 extreme storm crisis, draining underpasses and restoring normal traffic flow in record time.",
+        role1P3: "• Executive supervision of Sidi Gaber pedestrian bridge demolition in 36 hours without traffic stoppage.",
+        role1P4: "• Strategic relocation of 3 master drinking water mains with 100% elimination of bursts.",
+        role1P5: "• Spatial GIS and AI analytics slashing traffic accidents by 70% and leading transit alternatives dry-run with 125 field researchers.",
+        role2Title: "Member of the Governor's Technical Office — Follow-Up Directorate",
+        role2Org: "Alexandria Governorate Headquarters — Decision Support",
+        role2P1: "• Field oversight of national megaprojects, removing administrative and engineering bottlenecks to enforce delivery schedules.",
+        role2P2: "• Restructured billboard advertising sector, driving revenues past 48 million EGP in 2023 with removal of 9,000+ illegal billboards.",
+        role2P3: "• Field inspection, asset preservation, and referring institutional violations to competent judicial bodies.",
+        role3Title: "Operations Commander for Field Survey & Resettlement — «Bashayer El-Kheir»",
+        role3Org: "Urban Development & Slum Eradication Framework — Alexandria",
+        role3P1: "• Executive command over demographic census and dignified resettlement of thousands of families from vulnerable informal areas to modern civilized communities.",
+        role3P2: "• Coordinated joint field operations with the Armed Forces, earning official commendation from the Commander of the Northern Military Region.",
+        role4Title: "Legal Counsel & Regulatory Board Member — Hazardous Waste Management",
+        role4Org: "Alexandria Governorate & International Funding Entities",
+        role4P1: "Ensured statutory and environmental conformity with national legislation and international financing agreements.",
+        role5Title: "Field Operations & Regulatory Compliance Supervisor",
+        role5Org: "Central Housing Directorate & National Projects — Alexandria",
+        role5P1: "Supervised field inspection and census committees for slum eradication and urban development across Alexandria.",
+        projectsSub: "NATIONAL PROJECTS & INTERVENTIONS",
+        projectsTitle: "National Megaprojects & Complex Interventions",
+        projectsDesc: "Documented strategic interventions and high-impact operations led by Ahmed Yassin in support of executive leadership",
+        pCard1Badge: "Alexandria Metro & Raml Tram",
+        pCard1Title: "Integrated Alternative Transit Framework",
+        pCard1Desc: "Formulated and deployed multi-agency mass transit alternatives during the rail transition; added 2 lanes to Abu Qir Road to absorb commuters.",
+        pCard1Stat1: "Commuter Flow",
+        pCard1Stat2: "Zero Gridlock",
+        pCard2Badge: "Sidi Gaber Pedestrian Bridge",
+        pCard2Title: "Complex Demolition in 36 Hours Flat",
+        pCard2Desc: "Directed the rapid dismantling of the Sidi Gaber pedestrian bridge over a single weekend window to open the corridor for Alexandria Metro works.",
+        pCard2Stat1: "Execution Record",
+        pCard2Stat2: "36 Continuous Hours",
+        pCard3Badge: "Urban Flood Response",
+        pCard3Title: "Underpass Drainage & Media Command",
+        pCard3Desc: "Led field suction operations for extreme hail and storm runoff in Cleopatra and Ibrahimia tunnels; delivered live TV situation updates on ON E and MBC Masr.",
+        pCard3Stat1: "Field Command",
+        pCard3Stat2: "Live National TV",
+        trainSub: "EXECUTIVE ACADEMIES",
+        trainTitle: "Leadership Programs & Specialized Academies",
+        trainDesc: "Rigorous executive training for mayoral command, maritime disaster control, and defense academies",
+        prog1Badge: "Rank 1st Nationwide",
+        prog1Title: "Preparation Program for Center / City / District Mayor",
+        prog1Org: "Saqqara Local Development Training Center",
+        prog1Desc: "Sovereign executive program preparing future mayors and district chiefs in sustainable urban governance, conflict resolution, and municipal financial administration.",
+        prog2Title: "Advanced Leadership Development Program",
+        prog2Org: "Saqqara Local Development Training Center",
+        prog2Desc: "High-level strategic training in high-pressure decision-making, operational macro-planning, and cross-functional leadership.",
+        prog3Badge: "Marine Incident Command",
+        prog3Title: "Marine Disasters & Coastal Pollution Workshop",
+        prog3Org: "Coastal Emergency & Risk Management",
+        prog3Desc: "Rapid containment protocols for maritime oil spills, coastal environmental degradation, and port emergency response operations.",
+        prog4Badge: "Rank: 1st (Excellent Grade)",
+        prog4Title: "Future Leaders Program",
+        prog4Org: "Saqqara Training Center (2020)",
+        prog4Desc: "Ranked first nationwide with top honors, leading directly to gubernatorial commendation and excellence award.",
+        prog5Badge: "Higher Military Academy",
+        prog5Title: "Crisis Management & Strategic Negotiation",
+        prog5Org: "Nasser Higher Military Academy",
+        prog5Desc: "Strategic defense studies in sovereign crisis containment, high-stakes negotiation, and national security risk analysis.",
+        prog6Title: "Professional Government Official & Signal Command",
+        prog6Org: "National Training Academy (NTA) & Signal Corps",
+        prog6Desc: "Graduated from the prestigious NTA program, combined with technical signal command room training and certified PMP.",
+        credSub: "CREDENTIALS & HONORS",
+        credTitle: "Academic Degrees & Sovereign Distinctions",
+        credDesc: "Dual legal and executive business acumen backed by state and military recognition",
+        degHeader: "Postgraduate Academic Degrees",
+        mbaTitle: "Professional Master of Business Administration (MBA)",
+        mbaUni: "Kafrelsheikh University — Egypt (2025)",
+        mbaThesis: "Thesis: 'Evaluating the Organizational Effectiveness of Local Administrative Units in Alexandria Governorate' — Applied public sector governance.",
+        llmTitle: "Master of Laws (LL.M) in Public Law",
+        llmUni: "Tanta University — Faculty of Law (2014)",
+        llmDesc: "Specialized in administrative law, state constitutional doctrine, and public legislative policies.",
+        llbTitle: "Bachelor of Laws (LL.B)",
+        llbUni: "Alexandria University — Faculty of Law (2012)",
+        awardsHeader: "Official Commendations & Awards",
+        aw1Title: "Governor's Excellence Award & Shield",
+        aw1Desc: "Conferred personally by the Governor of Alexandria for exceptional strategic foresight and ranking first in the Future Leaders Program.",
+        aw2Title: "Northern Military Region Commendation",
+        aw2Desc: "Awarded by the Commander of the Northern Military Region for exemplary command in the Bashayer El-Kheir urban resettlement.",
+        aw3Title: "Egypt Government Excellence Award Nominee",
+        aw3Desc: "Nominated for 'Best Government Employee' at the national level across the Arab Republic of Egypt.",
+        aw4Title: "Decent Life (Haya Karima) Commendation",
+        aw4Desc: "Recognized for strategic voluntary leadership supporting presidential rural community development.",
+        galSub: "FIELD DISPATCH",
+        galTitle: "Command Room Operations & Live Media",
+        galDesc: "Uninterrupted executive presence across CCTV monitoring screens, field underpasses, and live satellite broadcasts",
+        g1Tag: "Command Room",
+        g1Desc: "Unified CCTV wall monitoring and incident dispatch",
+        g2Tag: "Executive Sessions",
+        g2Desc: "Presenting crisis mitigation briefs to the Governor",
+        g3Tag: "Field Operations",
+        g3Desc: "Clearing flash storm and hail floods from major tunnels",
+        g4Tag: "National Media",
+        g4Desc: "Live crisis updates broadcast across ON E and MBC Masr",
+        contactTitle: "Executive Direct Channels",
+        contactDesc: "For consultations in strategic planning, crisis control room leadership, and smart governance frameworks",
+        cPhone: "Direct Mobile Line",
+        cEmail: "Official Executive Email",
+        cLinkedin: "Verified LinkedIn Profile",
+        printCvFull: "Download & Export Comprehensive CV (PDF / Download)",
+        waContact: "Instant WhatsApp Dialogue",
+        footerName: "Dr. Ahmed Abdel-Moneam Yassin",
+        footerRights: "All Rights Reserved © 2026",
+        zoom: "Zoom Image"
+      }
+    };
+
+    // State Variables (Light Theme & Arabic are DEFAULTS)
+    let currentLang = 'ar';
+    let isDarkMode = false;
+
+    // Initialize Page Settings on Load
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Theme Configuration
+      const savedTheme = localStorage.getItem('ay_theme');
+      if (savedTheme === 'dark') {
+        enableDarkMode();
+      } else {
+        enableLightMode(); // Default
+      }
+
+      // 2. Language Configuration
+      const savedLang = localStorage.getItem('ay_lang');
+      if (savedLang === 'en') {
+        applyLanguage('en');
+      } else {
+        applyLanguage('ar'); // Default
+      }
+
+      // 3. Lucide Icons
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+
+      // 4. KPI Counters
+      initCounters();
+    });
+
+    // Theme Handlers
+    function toggleTheme() {
+      if (isDarkMode) {
+        enableLightMode();
+      } else {
+        enableDarkMode();
+      }
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    function enableDarkMode() {
+      document.documentElement.classList.add('dark');
+      isDarkMode = true;
+      localStorage.setItem('ay_theme', 'dark');
+      const icon = document.getElementById('themeIcon');
+      if (icon) {
+        icon.setAttribute('data-lucide', 'sun');
+      }
+    }
+
+    function enableLightMode() {
+      document.documentElement.classList.remove('dark');
+      isDarkMode = false;
+      localStorage.setItem('ay_theme', 'light');
+      const icon = document.getElementById('themeIcon');
+      if (icon) {
+        icon.setAttribute('data-lucide', 'moon');
+      }
+    }
+
+    // Language Handlers
+    function toggleLanguage() {
+      const nextLang = (currentLang === 'ar') ? 'en' : 'ar';
+      applyLanguage(nextLang);
+    }
+
+    function applyLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('ay_lang', lang);
+      
+      const html = document.documentElement;
+      html.setAttribute('lang', lang);
+      html.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+      
+      const label = document.getElementById('langLabel');
+      if (label) {
+        label.innerText = lang === 'ar' ? 'EN' : 'عربي';
+      }
+
+      // Update all translated elements
+      const dict = translations[lang];
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.innerHTML = dict[key];
+        }
+      });
+
+      if (window.lucide) window.lucide.createIcons();
+    }
+
+    // Mobile Menu Toggle
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      if (menu) {
+        menu.classList.toggle('hidden');
+      }
+    }
+
+    // Lightbox Modal for Photo Inspection
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      if (modal && img && cap) {
+        img.src = src;
+        cap.innerText = caption || '';
+        modal.classList.remove('hidden');
+      }
+    }
+
+    function closeLightbox() {
+      const modal = document.getElementById('lightboxModal');
+      if (modal) {
+        modal.classList.add('hidden');
+      }
+    }
+
+    // Close lightbox on Escape key
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeLightbox();
+    });
+
+    // KPI Counters Animation
+    function initCounters() {
+      const counters = document.querySelectorAll('.counter');
+      let triggered = false;
+
+      const runCounters = () => {
+        counters.forEach(counter => {
+          const targetStr = counter.getAttribute('data-target');
+          if (!targetStr) return;
+          const target = +targetStr;
+          let count = 0;
+          const increment = Math.ceil(target / 35);
+
+          const update = () => {
+            count += increment;
+            if (count < target) {
+              if (counter.innerText.includes('%') && counter.innerText.includes('-')) {
+                counter.innerText = '-' + count + '%';
+              } else if (counter.innerText.includes('%')) {
+                counter.innerText = count + '%';
+              } else if (counter.innerText.includes('+')) {
+                counter.innerText = '+' + count;
+              } else if (counter.innerText.includes('h')) {
+                counter.innerText = count + 'h';
+              } else {
+                counter.innerText = count;
+              }
+              setTimeout(update, 30);
+            } else {
+              if (counter.innerText.includes('%') && counter.innerText.includes('-')) {
+                counter.innerText = '-' + target + '%';
+              } else if (counter.innerText.includes('%')) {
+                counter.innerText = target + '%';
+              } else if (counter.innerText.includes('+')) {
+                counter.innerText = '+' + target;
+              } else if (counter.innerText.includes('h')) {
+                counter.innerText = target + 'h';
+              } else {
+                counter.innerText = target;
+              }
+            }
+          };
+          update();
+        });
+      };
+
+      window.addEventListener('scroll', () => {
+        if (!triggered && window.scrollY > 120) {
+          runCounters();
+          triggered = true;
+        }
+      });
+      if (window.scrollY > 120) {
+        runCounters();
+        triggered = true;
+      }
+    }
+  </script>
+</body>
+</html>

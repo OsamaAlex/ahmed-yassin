@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-brand-gold: #C59A27;
+  --color-brand-gold-light: #F5E397;
+  --color-brand-gold-dark: #8F6E12;
+  --color-brand-navy: #0A1428;
+  --color-brand-navy-light: #12203F;
+  --color-brand-slate-bg: #F8FAFC;
+  --color-brand-card-light: #FFFFFF;
+  --color-brand-dark-bg: #050B14;
+  --color-brand-darkBg: #050B14;
+  --color-brand-darkCard: #0C172B;
+  --color-brand-darkBorder: #1A2946;
+  --color-brand-goldLight: #F5E397;
+  --color-brand-goldDark: #8F6E12;
+  --color-brand-navyLight: #12203F;
+  --color-brand-dark-card: #0C172B;
+  --color-brand-dark-border: #1A2946;
+
+  --font-ar: var(--font-cairo), 'Cairo', sans-serif;
+  --font-en: var(--font-inter), 'Inter', sans-serif;
+}
+
+:root {
+  --background: #F8FAFC;
+  --foreground: #1E293B;
+}
+
+.dark {
+  --background: #050B14;
+  --foreground: #F1F5F9;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: var(--font-cairo), 'Cairo', sans-serif;
+}
+
+html[lang="en"] body {
+  font-family: var(--font-inter), 'Inter', sans-serif;
+}
+
+/* Light Theme Glass & Elevation */
+.theme-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 20px -2px rgba(10, 20, 40, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.theme-card:hover {
+  border-color: #C59A27;
+  box-shadow: 0 16px 30px -4px rgba(10, 20, 40, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Dark Theme Overrides */
+.dark .theme-card {
+  background: rgba(12, 23, 43, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+}
+.dark .theme-card:hover {
+  border-color: rgba(197, 154, 39, 0.5);
+  box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.8), 0 0 15px rgba(197, 154, 39, 0.15);
+}
+
+/* Custom Gold Gradient text */
+.gold-gradient {
+  background: linear-gradient(135deg, #B5871D 0%, #D8A932 50%, #8F6E12 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.dark .gold-gradient {
+  background: linear-gradient(135deg, #FFF1B5 0%, #D8A932 50%, #AA820A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Pulse radar effect for Emergency Center */
+.pulse-radar {
+  position: relative;
+}
+.pulse-radar::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.4);
+  animation: radar 2s infinite;
+  z-index: 0;
+}
+@keyframes radar {
+  0% { transform: scale(1); opacity: 0.9; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Executive Text Justification */
+.text-justified {
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: start;
+}
+
+/* Print optimization */
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  .theme-card { border: 1px solid #ccc !important; box-shadow: none !important; }
+}
